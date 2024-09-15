@@ -5,7 +5,7 @@ This is an end-to-end deep learning project focusing on predicting brain tumors 
 ## Architecture Diagram
 ![End-to-End Architecture](Project%20Images/arch.png)
 *Figure 1: End-to-End Architecture.*
-## Front End
+## User Interface
 Before discussing the problem and methodology, here’s a quick look at how the system works. The images below show the interface for uploading MRI scans and the model’s prediction results
 
 ### MRI Scan Upload Interface
