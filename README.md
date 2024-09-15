@@ -3,5 +3,5 @@
 *Figure 1: Interface for uploading MRI scans for tumor detection.*
 
 ## Tumor Detection Result
-![Tumor Detection Result](Project Images/pg1.png)
+![Tumor Detection Result](/Users/Abdul/Desktop/Brain-Tumor-Classifier/Project Images/pg1.png)
 *Figure 2: Prediction of Meningioma Tumor with confidence score.*
