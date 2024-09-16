@@ -30,7 +30,6 @@ Interpreting MRI scans to detect brain tumors can be challenging because differe
 
 2. Run TensorFlow Serving with Docker
 
-    **Important**: Replace `"/Users/ridwanaroworamimo/Desktop/Tumor Classification/Brain-Tumor-Classifier"` with the full path to your local project directory.
 
     ```bash
     docker run -t --rm -p 8501:8501 \
