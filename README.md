@@ -21,8 +21,6 @@ Interpreting MRI scans to detect brain tumors can be challenging because differe
 
 ## Methodology
 
-The project involved several steps from data collection to preprocessing, model building, and serving.
-
 ### 1. Data Collection
 
 The dataset used  is available on **Kaggle**: [Brain Tumor Classification (MRI)](https://www.kaggle.com/datasets/sartajbhuvaji/brain-tumor-classification-mri). It contains MRI scans of brain tumors, divided into **training** and **testing** sets, each with four classes:
