@@ -19,7 +19,6 @@ Before discussing the problem and methodology, here’s a quick look at how the 
 ## Problem Statement
 Interpreting MRI scans to detect brain tumors can be challenging because different brain diseases may appear similar. For example, an aggressive glioblastoma might resemble cancer that has spread to the brain from another part of the body. This is a problem because early and accurate diagnosis is crucial for ensuring proper treatment and improving patient outcomes. Therefore, a system that can accurately detect brain tumors from these scans can serve as a decision support tool, streamlining the diagnostic process and enabling faster, more informed treatment decisions.
 
-# Brain Tumor Classification App
 
 ## Setup Instructions
 
