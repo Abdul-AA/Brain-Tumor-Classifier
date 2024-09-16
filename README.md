@@ -1,6 +1,6 @@
 # Brain Tumor Classification
 ## Overview
-This is an end-to-end deep learning project focusing on developing a tool to predict the presence of brain tumors from MRI scans, adhering to MLOps best practices. It involves data collection and preprocessing with TensorFlow datasets, model training with TensorFlow, model serving and version management using TensorFlow Serving in a Docker image, and deployment through a FastAPI endpoint with a React.js front-end for user interaction. The end-to-end pipeling is shown in the architecture diagram below.
+This is an end-to-end deep learning project focusing on developing a tool to predict the presence of brain tumors from MRI scans, adhering to MLOps best practices. It involves data collection and preprocessing with TensorFlow datasets, model training with TensorFlow, model serving and version management using TensorFlow Serving, and deployment through a FastAPI endpoint with a React.js front-end for user interaction. The end-to-end pipeling is shown in the architecture diagram below.
 
 ## Architecture Diagram
 ![End-to-End Architecture](Project%20Images/arch.png)
