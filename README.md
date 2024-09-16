@@ -68,10 +68,11 @@ A FastAPI application was developed to interact with TensorFlow Serving, allowin
     cd Brain-Tumor-Classifier
     ```
 
-2. Run TensorFlow Serving with Docker
+2. Run TensorFlow Serving with Docker after downloading its Docker image. Run the following commands:
 
 
     ```bash
+    docker pull tensorflow/serving
     docker run -t --rm -p 8501:8501 \
       -v "/<your-root-path>/Brain-Tumor-Classifier:/Brain-Tumor-Classifier" \
       tensorflow/serving --rest_api_port=8501 --model_base_path=/Brain-Tumor-Classifier/saved_models
