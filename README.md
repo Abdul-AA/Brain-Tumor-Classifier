@@ -32,13 +32,9 @@ The dataset used  is available on **Kaggle**: [Brain Tumor Classification (MRI)]
 3. **Meningioma Tumor**
 4. **Glioma Tumor**
 
-# Brain Tumor Detection Model
-
-
 
 ### 2. Data Preprocessing
-- **Image Conversion:** Images were transformed into tensors and converted to RGB format to ensure uniformity.
-- **Resizing:** Each image was resized to 155x155 pixels, and a batch size of 32 was used during training.
+- **Preparing Images for Modeling:** Images were transformed into tensors and converted to RGB format. 
 - **Data Augmentation:** To improve generalization, random rotations and contrast adjustments were applied, generating artificial samples to handle different image orientations and contrasts.
 - **Normalization:** All pixel values were scaled by dividing by 255, ensuring values fell between 0 and 1.
 
