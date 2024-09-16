@@ -19,15 +19,49 @@ Before discussing the problem and methodology, here’s a quick look at how the 
 ## Problem Statement
 Interpreting MRI scans to detect brain tumors can be challenging because different brain diseases may appear similar. For example, an aggressive glioblastoma might resemble cancer that has spread to the brain from another part of the body. This is a problem because early and accurate diagnosis is crucial for ensuring proper treatment and improving patient outcomes. Therefore, a system that can accurately detect brain tumors from these scans can serve as a decision support tool, streamlining the diagnostic process and enabling faster, more informed treatment decisions.
 
-## Dataset
+## Methodology
 
-The dataset used for this project is available on **Kaggle**: [Brain Tumor Classification (MRI)](https://www.kaggle.com/datasets/sartajbhuvaji/brain-tumor-classification-mri). It contains MRI scans of brain tumors, divided into **training** and **testing** sets, each with four classes:
+The project involved several steps from data collection to preprocessing, model building, and serving.
+
+### 1. Data Collection
+
+The dataset used  is available on **Kaggle**: [Brain Tumor Classification (MRI)](https://www.kaggle.com/datasets/sartajbhuvaji/brain-tumor-classification-mri). It contains MRI scans of brain tumors, divided into **training** and **testing** sets, each with four classes:
 
 1. **No Tumor**
 2. **Pituitary Tumor**
 3. **Meningioma Tumor**
 4. **Glioma Tumor**
 
+# Brain Tumor Detection Model
+
+
+
+### 2. Data Preprocessing
+- **Image Conversion:** Images were transformed into tensors and converted to RGB format to ensure uniformity.
+- **Resizing:** Each image was resized to 155x155 pixels, and a batch size of 32 was used during training.
+- **Data Augmentation:** To improve generalization, random rotations and contrast adjustments were applied, generating artificial samples to handle different image orientations and contrasts.
+- **Normalization:** All pixel values were scaled by dividing by 255, ensuring values fell between 0 and 1.
+
+### 3. Model Building
+A convolutional neural network with the following architecture was trained on the training data:
+  - Four convolutional layers to capture complex patterns in MRI images.
+  - One fully connected layer for classification, with a dropout rate of 0.5 to reduce overfitting.
+    
+The model currently achieves a 61% accuracy on the test dataset obtained from Kaggle, which was held out during model training for unbiased evaluation.
+
+### 3. Model Versioning and Serving
+Multiple versions of the model were saved throughout experimentation, and TensorFlow Serving was used to manage and serve them. The system was configured to automatically mount the latest model version within a TensorFlow Serving Docker container, ensuring seamless updates without manual intervention.
+
+### 4. FastAPI EndPoint and React.js Frontend
+A FastAPI application was developed to interact with TensorFlow Serving, allowing users to upload MRI images for inference and receive predictions from the trained model. The API supports batch processing, enabling efficient handling of multiple user requests simultaneously. This helps in scenarios where many users interact with the model at the same time. A user-friendly web interface built with React.js was integrated with the FastAPI backend. It enables users to easily upload MRI scans via their web browsers. Once the images are uploaded, the interface communicates with the FastAPI API, and the model predictions are displayed alongside the confidence scores. 
+
+
+### Next Steps
+
+**Model Improvements**
+- **Exploring Advanced Architectures:** To improve the current model accuracy (61%), established architectures such as **ResNet** could be explored. These architectures have achieved good performance in similar tasks by allowing deeper models to extract more complex features without suffering from degradation in performance. Implementing such architectures could significantly improve feature extraction and classification accuracy.
+- **Hyperparameter Tuning:** Experimenting with hyperparameters like learning rates, batch sizes, and dropout rates may enhance both model performance and generalization. 
+- **Transfer Learning:** Leveraging pre-trained models and fine-tuning them on the specific dataset may not only accelerate training but also improve accuracy by utilizing the learned features from larger datasets.
 
 
 ## Setup Instructions
