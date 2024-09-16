@@ -43,10 +43,10 @@ A convolutional neural network with the following architecture was trained on th
     
 The model currently achieves a 61% accuracy on the test dataset obtained from Kaggle, which was held out during model training for unbiased evaluation.
 
-### 3. Model Versioning and Serving
+### 4. Model Versioning and Serving
 Multiple versions of the model were saved throughout experimentation, and TensorFlow Serving was used to manage and serve them. The system was configured to automatically mount the latest model version within a TensorFlow Serving Docker container, ensuring seamless updates without manual intervention.
 
-### 4. FastAPI EndPoint and React.js Frontend
+### 5. FastAPI EndPoint and React.js Frontend
 A FastAPI endpoint was created, allowing users to upload MRI images for inference and receive predictions from the trained model. The API supports batch processing, enabling efficient handling of multiple user requests simultaneously. This helps in scenarios where many users interact with the model at the same time. A user-friendly web interface built with React.js was integrated with the FastAPI endpoint. It enables users to easily upload MRI scans via their web browsers. Once the images are uploaded, the model predictions are displayed alongside the confidence scores. 
 
 
